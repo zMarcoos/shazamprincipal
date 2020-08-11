@@ -17,6 +17,10 @@ client.on('messageReactionAdd', async(MessageReacted, Usuario) => {
         return;
     }
     let staffrole = MessageReacted.message.guild.roles.cache.get("741388100391141379");
+    const embed = new Discord.MessageEmbed()
+    .setAuthor(message.guild.name, message.guild.iconURL())
+    .setColor("36393f")
+    .setDescription("Caso queira fechar este ticket, digite ``/fechar``.")
     switch (MessageReacted.emoji.name) {
         case "💰":
             var canalzinho = MessageReacted.message.guild.channels.create("compras-"+Usuario.username, {
@@ -37,7 +41,7 @@ client.on('messageReactionAdd', async(MessageReacted, Usuario) => {
                 ],
             }).then(c => {
                 c.setParent(categoria.id);
-                c.send(`Utilize \`\`/fechar\`\` para fechar este ticket.`);
+                c.send(embed);
             });
             MessageReacted.message.channel.send(`${Usuario}, seu ticket foi criado! Entre no canal ${(await canalzinho)} e tire suas dúvidas.`).then(m => m.delete({ timeout: 5000 }));
             break;
@@ -58,7 +62,10 @@ client.on('messageReactionAdd', async(MessageReacted, Usuario) => {
                         allow: ['VIEW_CHANNEL', 'SEND_MESSAGES', 'READ_MESSAGE_HISTORY'],
                     },
                 ],
-            }).then(c => c.setParent(categoria.id));
+            }).then(c => {
+                c.setParent(categoria.id);
+                c.send(embed);
+            });
             MessageReacted.message.channel.send(`${Usuario}, seu ticket foi criado! Entre no canal ${(await canalzinho)} e tire suas dúvidas.`).then(m => m.delete({ timeout: 5000 }));
             break;
         case "👮":
@@ -78,7 +85,10 @@ client.on('messageReactionAdd', async(MessageReacted, Usuario) => {
                         allow: ['VIEW_CHANNEL', 'SEND_MESSAGES', 'READ_MESSAGE_HISTORY'],
                     },
                 ],
-            }).then(c => c.setParent(categoria.id));
+            }).then(c => {
+                c.setParent(categoria.id);
+                c.send(embed);
+            });
             MessageReacted.message.channel.send(`${Usuario}, seu ticket foi criado! Entre no canal ${(await canalzinho)} e tire suas dúvidas.`).then(m => m.delete({ timeout: 5000 }));
             break;
         case "⛔":
@@ -98,7 +108,10 @@ client.on('messageReactionAdd', async(MessageReacted, Usuario) => {
                         allow: ['VIEW_CHANNEL', 'SEND_MESSAGES', 'READ_MESSAGE_HISTORY'],
                     },
                 ],
-            }).then(c => c.setParent(categoria.id));
+            }).then(c => {
+                c.setParent(categoria.id);
+                c.send(embed);
+            });
             MessageReacted.message.channel.send(`${Usuario}, seu ticket foi criado! Entre no canal ${(await canalzinho)} e tire suas dúvidas.`).then(m => m.delete({ timeout: 5000 }));
             break;
         case "❓":
@@ -118,7 +131,10 @@ client.on('messageReactionAdd', async(MessageReacted, Usuario) => {
                         allow: ['VIEW_CHANNEL', 'SEND_MESSAGES', 'READ_MESSAGE_HISTORY'],
                     },
                 ],
-            }).then(c => c.setParent(categoria.id));
+            }).then(c => {
+                c.setParent(categoria.id);
+                c.send(embed);
+            });
             MessageReacted.message.channel.send(`${Usuario}, seu ticket foi criado! Entre no canal ${(await canalzinho)} e tire suas dúvidas.`).then(m => m.delete({ timeout: 5000 }));
             break;
         case "🛡️":
@@ -138,7 +154,10 @@ client.on('messageReactionAdd', async(MessageReacted, Usuario) => {
                         allow: ['VIEW_CHANNEL', 'SEND_MESSAGES', 'READ_MESSAGE_HISTORY'],
                     },
                 ],
-            }).then(c => c.setParent(categoria.id));
+            }).then(c => {
+                c.setParent(categoria.id);
+                c.send(embed);
+            });
             MessageReacted.message.channel.send(`${Usuario}, seu ticket foi criado! Entre no canal ${(await canalzinho)} e tire suas dúvidas.`).then(m => m.delete({ timeout: 5000 }));
             break;
         default:
