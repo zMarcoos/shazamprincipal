@@ -25,7 +25,7 @@ client.on('messageReactionAdd', async(MessageReacted, Usuario) => {
     .setDescription("Caso queira fechar este ticket, digite ``/fechar``.")
     switch (MessageReacted.emoji.name) {
         case "💰":
-            var canalzinho = MessageReacted.message.guild.channels.create("compras-"+Usuario.username, {
+            MessageReacted.message.guild.channels.create("compras-"+Usuario.username, {
                 type: 'text',
                 permissionOverwrites: [
                     {
@@ -44,11 +44,11 @@ client.on('messageReactionAdd', async(MessageReacted, Usuario) => {
             }).then(c => {
                 c.setParent(categoria.id);
                 c.send(embed);
+                MessageReacted.message.channel.send(`${Usuario}, seu ticket foi criado! Entre no canal ${(await c)} e tire suas dúvidas.`).then(m => m.delete({ timeout: 5000 }));
             });
-            MessageReacted.message.channel.send(`${Usuario}, seu ticket foi criado! Entre no canal ${(await canalzinho)} e tire suas dúvidas.`).then(m => m.delete({ timeout: 5000 }));
             break;
         case "👾":
-            var canalzinho = MessageReacted.message.guild.channels.create("erros-" + Usuario.username, {
+            MessageReacted.message.guild.channels.create("erros-" + Usuario.username, {
                 type: 'text',
                 permissionOverwrites: [
                     {
@@ -67,11 +67,11 @@ client.on('messageReactionAdd', async(MessageReacted, Usuario) => {
             }).then(c => {
                 c.setParent(categoria.id);
                 c.send(embed);
+                MessageReacted.message.channel.send(`${Usuario}, seu ticket foi criado! Entre no canal ${(await c)} e tire suas dúvidas.`).then(m => m.delete({ timeout: 5000 }));
             });
-            MessageReacted.message.channel.send(`${Usuario}, seu ticket foi criado! Entre no canal ${(await canalzinho)} e tire suas dúvidas.`).then(m => m.delete({ timeout: 5000 }));
             break;
         case "👮":
-            var canalzinho = MessageReacted.message.guild.channels.create("denúncias-" + Usuario.username, {
+            MessageReacted.message.guild.channels.create("denúncias-" + Usuario.username, {
                 type: 'text',
                 permissionOverwrites: [
                     {
@@ -90,11 +90,11 @@ client.on('messageReactionAdd', async(MessageReacted, Usuario) => {
             }).then(c => {
                 c.setParent(categoria.id);
                 c.send(embed);
+                MessageReacted.message.channel.send(`${Usuario}, seu ticket foi criado! Entre no canal ${(await c)} e tire suas dúvidas.`).then(m => m.delete({ timeout: 5000 }));
             });
-            MessageReacted.message.channel.send(`${Usuario}, seu ticket foi criado! Entre no canal ${(await canalzinho)} e tire suas dúvidas.`).then(m => m.delete({ timeout: 5000 }));
             break;
         case "⛔":
-            var canalzinho = MessageReacted.message.guild.channels.create("revisão-" + Usuario.username, {
+            MessageReacted.message.guild.channels.create("revisão-" + Usuario.username, {
                 type: 'text',
                 permissionOverwrites: [
                     {
@@ -113,11 +113,11 @@ client.on('messageReactionAdd', async(MessageReacted, Usuario) => {
             }).then(c => {
                 c.setParent(categoria.id);
                 c.send(embed);
+                MessageReacted.message.channel.send(`${Usuario}, seu ticket foi criado! Entre no canal ${(await c)} e tire suas dúvidas.`).then(m => m.delete({ timeout: 5000 }));
             });
-            MessageReacted.message.channel.send(`${Usuario}, seu ticket foi criado! Entre no canal ${(await canalzinho)} e tire suas dúvidas.`).then(m => m.delete({ timeout: 5000 }));
             break;
         case "❓":
-            var canalzinho = MessageReacted.message.guild.channels.create("dúvidas-" + Usuario.username, {
+            MessageReacted.message.guild.channels.create("dúvidas-" + Usuario.username, {
                 type: 'text',
                 permissionOverwrites: [
                     {
@@ -136,11 +136,11 @@ client.on('messageReactionAdd', async(MessageReacted, Usuario) => {
             }).then(c => {
                 c.setParent(categoria.id);
                 c.send(embed);
+                MessageReacted.message.channel.send(`${Usuario}, seu ticket foi criado! Entre no canal ${(await c)} e tire suas dúvidas.`).then(m => m.delete({ timeout: 5000 }));
             });
-            MessageReacted.message.channel.send(`${Usuario}, seu ticket foi criado! Entre no canal ${(await canalzinho)} e tire suas dúvidas.`).then(m => m.delete({ timeout: 5000 }));
             break;
         case "🛡️":
-            var canalzinho = MessageReacted.message.guild.channels.create("outros-assuntos-" + Usuario.username, {
+            MessageReacted.message.guild.channels.create("outros-assuntos-" + Usuario.username, {
                 type: 'text',
                 permissionOverwrites: [
                     {
@@ -159,8 +159,8 @@ client.on('messageReactionAdd', async(MessageReacted, Usuario) => {
             }).then(c => {
                 c.setParent(categoria.id);
                 c.send(embed);
+                MessageReacted.message.channel.send(`${Usuario}, seu ticket foi criado! Entre no canal ${(await c)} e tire suas dúvidas.`).then(m => m.delete({ timeout: 5000 }));
             });
-            MessageReacted.message.channel.send(`${Usuario}, seu ticket foi criado! Entre no canal ${(await canalzinho)} e tire suas dúvidas.`).then(m => m.delete({ timeout: 5000 }));
             break;
         default:
             MessageReacted.message.channel.send("Este emoji não corresponde a nenhuma ação.");
