@@ -1,4 +1,6 @@
 const { client } = require("../index");
+const Discord = require("discord.js");
+
 client.on('messageReactionAdd', async(MessageReacted, Usuario) => {
     if(Usuario.bot) return;
     if (MessageReacted.message.id !== "742731240620163133") return;
