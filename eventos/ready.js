@@ -22,4 +22,4 @@ client.on('ready', async () => {
     };
     setInterval(() => setStatus(), 5000);
 });
-client.login("NzQyMzk3Mjg5NTg2NDkxNDMz.XzFhWg.hf5QZiapevUwsUQnSMPcsxx5sFM");
+client.login(process.env.TOKEN);
