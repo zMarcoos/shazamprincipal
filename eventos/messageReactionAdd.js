@@ -20,7 +20,7 @@ client.on('messageReactionAdd', async(MessageReacted, Usuario) => {
     }
     let staffrole = MessageReacted.message.guild.roles.cache.get("741388100391141379");
     const embed = new Discord.MessageEmbed()
-    .setAuthor(message.guild.name, message.guild.iconURL())
+    .setAuthor(MessageReacted.message.guild.name, MessageReacted.message.guild.iconURL())
     .setColor("36393f")
     .setDescription("Caso queira fechar este ticket, digite ``/fechar``.")
     switch (MessageReacted.emoji.name) {
