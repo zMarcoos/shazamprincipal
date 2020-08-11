@@ -35,8 +35,10 @@ client.on('messageReactionAdd', async(MessageReacted, Usuario) => {
                         allow: ['VIEW_CHANNEL', 'SEND_MESSAGES', 'READ_MESSAGE_HISTORY'],
                     },
                 ],
-            }).then(c => c.setParent(categoria.id));
-            await canalzinho.send(`Utilize \`\`/fechar\`\` para fechar este ticket.`);
+            }).then(c => {
+                c.setParent(categoria.id);
+                c.send(`Utilize \`\`/fechar\`\` para fechar este ticket.`);
+            });
             MessageReacted.message.channel.send(`${Usuario}, seu ticket foi criado! Entre no canal ${(await canalzinho)} e tire suas dúvidas.`).then(m => m.delete({ timeout: 5000 }));
             break;
         case "👾":
