@@ -44,7 +44,7 @@ client.on('messageReactionAdd', async(MessageReacted, Usuario) => {
             }).then(c => {
                 c.setParent(categoria.id);
                 c.send(embed);
-                MessageReacted.message.channel.send(`${Usuario}, seu ticket foi criado! Entre no canal ${(await c)} e tire suas dúvidas.`).then(m => m.delete({ timeout: 5000 }));
+                MessageReacted.message.channel.send(`${Usuario}, seu ticket foi criado! Entre no canal ${c} e tire suas dúvidas.`).then(m => m.delete({ timeout: 5000 }));
             });
             break;
         case "👾":
@@ -67,7 +67,7 @@ client.on('messageReactionAdd', async(MessageReacted, Usuario) => {
             }).then(c => {
                 c.setParent(categoria.id);
                 c.send(embed);
-                MessageReacted.message.channel.send(`${Usuario}, seu ticket foi criado! Entre no canal ${(await c)} e tire suas dúvidas.`).then(m => m.delete({ timeout: 5000 }));
+                MessageReacted.message.channel.send(`${Usuario}, seu ticket foi criado! Entre no canal ${c} e tire suas dúvidas.`).then(m => m.delete({ timeout: 5000 }));
             });
             break;
         case "👮":
@@ -90,7 +90,7 @@ client.on('messageReactionAdd', async(MessageReacted, Usuario) => {
             }).then(c => {
                 c.setParent(categoria.id);
                 c.send(embed);
-                MessageReacted.message.channel.send(`${Usuario}, seu ticket foi criado! Entre no canal ${(await c)} e tire suas dúvidas.`).then(m => m.delete({ timeout: 5000 }));
+                MessageReacted.message.channel.send(`${Usuario}, seu ticket foi criado! Entre no canal ${c} e tire suas dúvidas.`).then(m => m.delete({ timeout: 5000 }));
             });
             break;
         case "⛔":
@@ -113,7 +113,7 @@ client.on('messageReactionAdd', async(MessageReacted, Usuario) => {
             }).then(c => {
                 c.setParent(categoria.id);
                 c.send(embed);
-                MessageReacted.message.channel.send(`${Usuario}, seu ticket foi criado! Entre no canal ${(await c)} e tire suas dúvidas.`).then(m => m.delete({ timeout: 5000 }));
+                MessageReacted.message.channel.send(`${Usuario}, seu ticket foi criado! Entre no canal ${c} e tire suas dúvidas.`).then(m => m.delete({ timeout: 5000 }));
             });
             break;
         case "❓":
@@ -136,7 +136,7 @@ client.on('messageReactionAdd', async(MessageReacted, Usuario) => {
             }).then(c => {
                 c.setParent(categoria.id);
                 c.send(embed);
-                MessageReacted.message.channel.send(`${Usuario}, seu ticket foi criado! Entre no canal ${(await c)} e tire suas dúvidas.`).then(m => m.delete({ timeout: 5000 }));
+                MessageReacted.message.channel.send(`${Usuario}, seu ticket foi criado! Entre no canal ${c} e tire suas dúvidas.`).then(m => m.delete({ timeout: 5000 }));
             });
             break;
         case "🛡️":
@@ -159,7 +159,7 @@ client.on('messageReactionAdd', async(MessageReacted, Usuario) => {
             }).then(c => {
                 c.setParent(categoria.id);
                 c.send(embed);
-                MessageReacted.message.channel.send(`${Usuario}, seu ticket foi criado! Entre no canal ${(await c)} e tire suas dúvidas.`).then(m => m.delete({ timeout: 5000 }));
+                MessageReacted.message.channel.send(`${Usuario}, seu ticket foi criado! Entre no canal ${c} e tire suas dúvidas.`).then(m => m.delete({ timeout: 5000 }));
             });
             break;
         default:
